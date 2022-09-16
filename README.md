@@ -39,12 +39,13 @@ sudo apt install -y gcc-aarch64-linux-gnu
 
 ```zsh
 wget https://downloads.sourceforge.net/project/lmbench/development/lmbench-3.0-a9/lmbench-3.0-a9.tgz
-tar xvfz lmbench-3.0-a9.tgz
-cd lmbench-3.0-a9
+tar xvfz lmbench-3.0-a9.tgz
 ```
 
 ### 建構
 
 ```zsh
+cd lmbench-3.0-a9
+
 make OS=aarch64 CC="aarch64-linux-gnu-gcc -static"
 ```
