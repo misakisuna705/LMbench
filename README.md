@@ -7,9 +7,10 @@
     - [目標](#目標)
 * [環境](#環境)
     - [cross compiler](#cross-compiler)
-* [lmbench](#lmbench)
+* [LMbench](#lmbench)
     - [下載](#下載)
-    - [建構](#建構)
+    - [構建](#構建)
+    - [執行](#執行)
 
 <!-- vim-markdown-toc -->
 
@@ -33,7 +34,7 @@
 sudo apt install -y gcc-aarch64-linux-gnu
 ```
 
-## lmbench
+## LMbench
 
 ### 下載
 
@@ -42,10 +43,16 @@ wget https://downloads.sourceforge.net/project/lmbench/development/lmbench-3.0-a
 tar xvfz lmbench-3.0-a9.tgz
 ```
 
-### 建構
+### 構建
 
 ```zsh
 cd lmbench-3.0-a9
 
 make OS=aarch64 CC="aarch64-linux-gnu-gcc -static"
+```
+
+### 執行
+
+```
+./bin/aarch64/bw_mem 512m [執行檔]
 ```
